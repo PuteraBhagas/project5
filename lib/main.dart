@@ -7,7 +7,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override 
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -114,11 +114,42 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(color: Colors.white),
                 ),
               ),
+              const SizedBox(height: 20),
+              // Tambahan kode buttons
+              ElevatedButton(
+                onPressed: () {
+                  print("Elevated Button ditekan!");
+                },
+                child: const Text("Elevated Button"),
+              ),
+              const SizedBox(height: 10),
+              TextButton(
+                onPressed: () {
+                  print("Text Button ditekan!");
+                },
+                child: const Text("Text Button"),
+              ),
+              const SizedBox(height: 10),
+              OutlinedButton(
+                onPressed: () {
+                  print("Outlined Button ditekan!");
+                },
+                child: const Text("Outlined Button"),
+              ),
+              const SizedBox(height: 10),
+              IconButton(
+                icon: const Icon(Icons.favorite, color: Colors.red),
+                onPressed: () {
+                  print("Icon Button ditekan!");
+                },
+              ),
             ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            print("Floating Action Button ditekan!");
+          },
           child: const Icon(Icons.add),
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -138,6 +169,6 @@ class MyApp extends StatelessWidget {
           ],
         ),
       ),
-    ); 
+    );
   }
-} 
+}
