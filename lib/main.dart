@@ -46,104 +46,112 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text("Atas"),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(Icons.star, color: Colors.red, size: 40),
-                  Icon(Icons.star, color: Colors.green, size: 40),
-                  Icon(Icons.star, color: Colors.blue, size: 40),
-                ],
-              ),
-              const Text("Bawah"),
-              const SizedBox(height: 20),
-              Container(
-                width: 200,
-                height: 100,
-                color: Colors.amber,
-                child: const Center(
-                  child: Text("Halo Flutter"),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text("Atas"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(Icons.star, color: Colors.red, size: 40),
+                    Icon(Icons.star, color: Colors.green, size: 40),
+                    Icon(Icons.star, color: Colors.blue, size: 40),
+                  ],
                 ),
-              ),
-              const SizedBox(height: 10),
-              Container(
-                width: 200,
-                height: 100,
-                color: Colors.orange,
-                alignment: Alignment.bottomRight,
-                child: const Text("Sudut kanan bawah"),
-              ),
-              const SizedBox(height: 10),
-              Container(
-                width: 150,
-                height: 150,
-                decoration: BoxDecoration(
-                  color: Colors.teal,
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.black, width: 3),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Container(
-                width: 200,
-                height: 100,
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [Colors.purple, Colors.pink],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
+                const Text("Bawah"),
+                const SizedBox(height: 20),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.amber,
+                  child: const Center(
+                    child: Text("Halo Flutter"),
                   ),
                 ),
-                child: const Center(
-                  child: Text(
-                    "Gradient Container",
+                const SizedBox(height: 10),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.orange,
+                  alignment: Alignment.bottomRight,
+                  child: const Text("Sudut kanan bawah"),
+                ),
+                const SizedBox(height: 10),
+                Container(
+                  width: 150,
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: Colors.black, width: 3),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Container(
+                  width: 200,
+                  height: 100,
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Colors.purple, Colors.pink],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Gradient Container",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Container(
+                  margin: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(10),
+                  color: Colors.blue,
+                  child: const Text(
+                    "Dengan Margin & Padding",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
-              ),
-              const SizedBox(height: 10),
-              Container(
-                margin: const EdgeInsets.all(20),
-                padding: const EdgeInsets.all(10),
-                color: Colors.blue,
-                child: const Text(
-                  "Dengan Margin & Padding",
-                  style: TextStyle(color: Colors.white),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    print("Elevated Button ditekan!");
+                  },
+                  child: const Text("Elevated Button"),
                 ),
-              ),
-              const SizedBox(height: 20),
-              // Tambahan kode buttons
-              ElevatedButton(
-                onPressed: () {
-                  print("Elevated Button ditekan!");
-                },
-                child: const Text("Elevated Button"),
-              ),
-              const SizedBox(height: 10),
-              TextButton(
-                onPressed: () {
-                  print("Text Button ditekan!");
-                },
-                child: const Text("Text Button"),
-              ),
-              const SizedBox(height: 10),
-              OutlinedButton(
-                onPressed: () {
-                  print("Outlined Button ditekan!");
-                },
-                child: const Text("Outlined Button"),
-              ),
-              const SizedBox(height: 10),
-              IconButton(
-                icon: const Icon(Icons.favorite, color: Colors.red),
-                onPressed: () {
-                  print("Icon Button ditekan!");
-                },
-              ),
-            ],
+                const SizedBox(height: 10),
+                TextButton(
+                  onPressed: () {
+                    print("Text Button ditekan!");
+                  },
+                  child: const Text("Text Button"),
+                ),
+                const SizedBox(height: 10),
+                OutlinedButton(
+                  onPressed: () {
+                    print("Outlined Button ditekan!");
+                  },
+                  child: const Text("Outlined Button"),
+                ),
+                const SizedBox(height: 10),
+                IconButton(
+                  icon: const Icon(Icons.favorite, color: Colors.red),
+                  onPressed: () {
+                    print("Icon Button ditekan!");
+                  },
+                ),
+                const SizedBox(height: 20),
+                // Tambahan kode FlutterLogo
+                const FlutterLogo(
+                  size: 100,
+                  style: FlutterLogoStyle.horizontal,
+                  textColor: Colors.blue,
+                ),
+              ],
+            ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
